@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #2c1d0f;
+  font-family: 'Great Vibes', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: auto;
+}
+
+.scroll-container {
+  perspective: 1000px;
+}
+
+.scroll-paper {
+  width: 80vw;
+  max-width: 600px;
+  height: 0;
+  overflow: auto;
+  background: url('https://www.transparenttextures.com/patterns/aged-paper.png'), #fdf3d1;
+  border: 10px solid #a9744f;
+  border-radius: 10px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  transition: height 3s ease-out;
+  padding: 40px;
+  box-sizing: border-box;
+  transform-origin: top center;
+}
+
+.scroll-paper.revealed {
+  height: 80vh;
+}
+
+.love-letter {
+  opacity: 0;
+  transition: opacity 2s ease 2s;
+  font-size: 1rem;
+  color: #5c3b1e;
+  line-height: 1;
+}
+
+.scroll-paper.revealed .love-letter {
+  opacity: 1;
+}
+
+.love-letter h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.signature {
+  margin-top: 40px;
+  text-align: right;
+}
